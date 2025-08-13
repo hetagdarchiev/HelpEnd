@@ -1,0 +1,23 @@
+@mixin toggleBlock($type:false) {
+  @if ($type == false) {
+    display: none !important;
+  } @else if ($type == true) {
+    display: block !important;
+  }
+}
+
+@mixin hover($mobile:true) {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+  @media (hover: none) {
+    @if ($mobile == true) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}
+

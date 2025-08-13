@@ -1,0 +1,18 @@
+:root {
+  --white: #ffffff;
+  --gray: #838383;
+  --gray-dark: #3a3a3a;
+  --dark: #131313;
+
+  --backgroup-color: var(--white);
+  --border-color: var(--gray);
+  --text-color: var(--gray-black);
+
+  --slow: .4s ease-in;
+}
+
+body.dark {
+  --backgroup-color: var(--dark);
+  --border-color: var(--gray-dark);
+  --text-color: var(--white);
+}

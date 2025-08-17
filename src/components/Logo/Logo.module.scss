@@ -1,0 +1,11 @@
+.logo {
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+        min-width: 30px;
+        max-width: 62px;
+        max-height: 62px;
+        padding: 1px;
+        width: 100%;
+    }
+}

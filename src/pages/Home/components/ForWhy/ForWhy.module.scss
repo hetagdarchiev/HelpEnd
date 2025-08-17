@@ -1,0 +1,45 @@
+@use "../../../../styles/helpers/" as *;
+.for-who {
+    color: var(--light);
+    background-color: var(--red-light);
+    max-height: 0px;
+    overflow: hidden;
+    animation: scale 1s 1.45s forwards linear;
+    &__title {
+        text-align: center;
+        color: var(--light);
+        padding-block: 50px;
+        @include tablet {
+            padding-block: 20px;
+        }
+    }
+    &__list {
+        font-size: rem(48);
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            font-size: rem(24);
+        }
+        @include mobile {
+            font-size: rem(20);
+        }
+    }
+    &__item {
+        max-width: fit-content;
+        position: relative;
+    }
+    &__wrapper {
+        padding-bottom: 20px;
+    }
+    @keyframes scale {
+        0% {
+            max-height: 0px;
+        }
+        100% {
+            max-height: 100vh;
+        }
+    }
+}

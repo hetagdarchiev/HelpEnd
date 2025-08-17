@@ -1,0 +1,65 @@
+@use "../../styles/helpers/" as *;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: var(--br-30);
+    padding-block: 10px;
+    margin-bottom: 40px;
+    @include tablet {
+        margin-bottom: 10px;
+    }
+    &__sub-container {
+        display: flex;
+        position: relative;
+        align-items: center;
+        transform: translateX(0);
+        opacity: 100%;
+        gap: 20px;
+
+        @include tablet {
+            nav,
+            button {
+                display: none;
+            }
+            animation: hidden 0.1s;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-color: var(--background-color);
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            width: 100%;
+            z-index: -1;
+            height: 100%;
+            transition:
+                opacity var(--tr-middle),
+                transform var(--tr-middle);
+        }
+    }
+    &__sub-container--opened {
+        @include tablet {
+            nav,
+            button {
+                display: block;
+            }
+            opacity: 100%;
+            z-index: 10;
+        }
+    }
+}
+@keyframes hidden {
+    0% {
+        display: none;
+    }
+    50% {
+        display: none;
+    }
+    100% {
+        display: flex;
+    }
+}

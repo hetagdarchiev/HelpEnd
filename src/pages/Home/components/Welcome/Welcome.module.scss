@@ -1,0 +1,62 @@
+@use "../../../../styles/helpers/" as *;
+.welcome {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-block: 40px;
+    background-image: url("../../../../assets/img/elips.png"), url("../../../../assets/img/line.png");
+    background-repeat: no-repeat, repeat-x;
+    background-size: contain, auto;
+    background-position: bottom, bottom;
+    animation: riseUp 1.5s ease-out forwards;
+    @include bLoptop {
+        height: 500px;
+    }
+    @include tablet {
+        background-image: url("../../../../assets/img/square.png"), url("../../../../assets/img/line.png");
+        height: 400px;
+        background-size: 150%, 100%;
+    }
+    @include mobile {
+        background-image: url("../../../../assets/img/squareHight1.png"), url("../../../../assets/img/line.png");
+        height: 300px;
+    }
+    span {
+        display: block;
+        &:first-child {
+            animation: wordsUpper 1s ease;
+        }
+        &:nth-child(2) {
+            animation: wordsUpper 1.25s ease;
+        }
+        &:nth-child(3) {
+            animation: wordsUpper 1.5s ease;
+        }
+        &:nth-child(4) {
+            animation: wordsUpper 1.7s ease;
+        }
+    }
+}
+@keyframes wordsUpper {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes riseUp {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}

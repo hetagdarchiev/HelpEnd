@@ -1,0 +1,37 @@
+@use "../../styles/helpers/" as *;
+.burger-btn {
+    display: none;
+    min-width: 30px;
+    width: 35px;
+    height: 25px;
+    flex-direction: column;
+    position: relative;
+    z-index: 12;
+    justify-content: space-between;
+    @include tablet 
+    {
+        display: flex;
+    }
+    span {
+        background-color: var(--invert);
+        margin-inline: auto;
+        width: 90%;
+        height: 3px;
+        display: block;
+        transition: var(--tr-middle);
+    }
+    &--open {
+        span {
+            &:first-child {
+                transform: translateY(12px) rotate(-135deg);
+            }
+            &:last-child {
+                transform: translateY(-10px) rotate(135deg);
+            }
+            &:nth-child(2) {
+                transform: rotate(135deg);
+                opacity: 0;
+            }
+        }
+    }
+}

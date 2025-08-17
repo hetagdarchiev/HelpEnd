@@ -1,5 +1,5 @@
-@use 'fonts' as *;
-
+@use "fonts" as *;
+@use "./helpers/" as *;
 body {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -7,6 +7,45 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   font-size: 16px;
-  background-color: var(--backgroup-color);
+  background-color: var(--background-color);
   color: var(--text-color);
+  min-width: 319px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+h1 {
+  font-size: rem(72);
+  text-transform: uppercase;
+  text-align: center;
+  @include loptop {
+    font-size: rem(62);
+  }
+  @include tablet {
+    font-size: rem(32);
+  }
+}
+h2 {
+  font-size: rem(52);
+  text-transform: uppercase;
+  color: var(--text-color);
+  @include tablet {
+    font-size: rem(28);
+  }
+}
+input {
+  border: none;
+  max-width: 500px;
+  min-width: 200px;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: rem(24);
+  font-weight: bold;
+  border: 2px solid var(--red-light);
+  border-radius: var(--br-30);
+  transition: var(--tr-fast);
+  margin-bottom: 10px;
+  &:focus-visible {
+    border-color: var(--deep-red);
+  }
 }

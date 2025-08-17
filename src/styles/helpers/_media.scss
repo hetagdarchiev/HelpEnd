@@ -1,0 +1,25 @@
+$bLoptop: 1440px;
+$loptop: 1025px;
+$tablet: 769px;
+$mobile: 426px;
+
+@mixin bLoptop {
+    @media (max-width: $bLoptop) {
+        @content;
+    }
+}
+@mixin loptop {
+    @media (max-width: $loptop) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}

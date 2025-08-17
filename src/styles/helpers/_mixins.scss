@@ -1,12 +1,11 @@
-@mixin toggleBlock($type:false) {
+@mixin toggleBlock($type: false) {
   @if ($type == false) {
     display: none !important;
   } @else if ($type == true) {
     display: block !important;
   }
 }
-
-@mixin hover($mobile:true) {
+@mixin hover($mobile: true) {
   @media (hover: hover) {
     &:hover {
       @content;
@@ -20,4 +19,8 @@
     }
   }
 }
-
+@mixin container($width, $padd) {
+  max-width: calc(#{$width}px + #{$padd * 2}px);
+  padding-inline: #{$padd}px;
+  margin-inline: auto;
+}

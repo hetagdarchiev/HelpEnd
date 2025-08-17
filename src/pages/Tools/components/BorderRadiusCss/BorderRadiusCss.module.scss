@@ -1,0 +1,14 @@
+.border-radius {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__value {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__box 
+    {
+        aspect-ratio: 1;
+    }
+}

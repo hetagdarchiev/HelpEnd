@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import style from './ToggleTheme.module.scss'
+import style from "./ToggleTheme.module.scss";
 export default function ToggleTheme() {
   const [darkTheme, setDarkTheme] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -22,5 +22,9 @@ export default function ToggleTheme() {
     setDarkTheme((prev) => !prev);
   }
 
-  return <button className={`${style['toggle-btn']}`} onClick={toggleBtn}>{theme === "dark" ? "🌚" : "🌝"}</button>;
+  return (
+    <button className={`${style["toggle-btn"] || ""}`} onClick={toggleBtn}>
+      {theme === "dark" ? "🌚" : "🌝"}
+    </button>
+  );
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PX from './components/BorderRadiusCss/BorderRadiusCss'
+import S from "./components/AnimationCss/AnimationCss";
 export default function FuncName() {
-  return <PX />;
+  return <S />;
 }

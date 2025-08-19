@@ -5,38 +5,38 @@ export default function Navbar({ onClick }) {
     onClick(false);
   };
   return (
-    <nav className={style["navbar"]}>
-      <ul className={style["navbar__list"]}>
-        <li className={style["navbar__item"]}>
+    <nav className={style["navbar"] || ""}>
+      <ul className={style["navbar__list"] || ""}>
+        <li className={style["navbar__item"] || ""}>
           <Link
-            className={style["navbar__link"]}
+            className={style["navbar__link"] || ""}
             to={"/home"}
             onClick={hundleClose}
           >
             Home
           </Link>
         </li>
-        <li className={style["navbar__item"]}>
+        <li className={style["navbar__item"] || ""}>
           <Link
-            className={style["navbar__link"]}
+            className={style["navbar__link"] || ""}
             to={"/tools"}
             onClick={hundleClose}
           >
             Tools
           </Link>
         </li>
-        <li className={style["navbar__item"]}>
+        <li className={style["navbar__item"] || ""}>
           <Link
-            className={style["navbar__link"]}
+            className={style["navbar__link"] || ""}
             to={"/documentation"}
             onClick={hundleClose}
           >
             Documentation
           </Link>
         </li>
-        <li className={style["navbar__item"]}>
+        <li className={style["navbar__item"] || ""}>
           <Link
-            className={style["navbar__link"]}
+            className={style["navbar__link"] || ""}
             to={"/about"}
             onClick={hundleClose}
           >

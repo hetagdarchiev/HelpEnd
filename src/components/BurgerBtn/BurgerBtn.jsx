@@ -7,7 +7,7 @@ export default function BurgerBtn({ onClick, isOpen }) {
   return (
     <>
       <button
-        className={`${style["burger-btn"]} ${
+        className={`${style["burger-btn"] || ""} ${
           isOpen ? style["burger-btn--open"] : ""
         }`}
         onClick={hundleOpen}

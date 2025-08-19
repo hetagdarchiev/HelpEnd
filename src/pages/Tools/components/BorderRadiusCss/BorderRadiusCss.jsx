@@ -4,9 +4,9 @@ export default function BorderRadius() {
   const [radius, setRadius] = useState('15px');
 
   return (
-    <section className={`${style["border-radius"]} container`}>
+    <section className={`${style["border-radius"]|| ''} container`}>
       <input
-        className={`${style["border-radius__value"]}`}
+        className={`${style["border-radius__value"]|| ''}`}
         type="text"
         onChange={(e) => {
           setRadius(e.target.value);
@@ -14,7 +14,7 @@ export default function BorderRadius() {
         value={radius}
       />
       <div
-        className={`${style["border-radius__box"]}`}
+        className={`${style["border-radius__box"]|| ''}`}
         style={{
           maxWidth: "500px",
           width: "100%",

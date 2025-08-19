@@ -49,3 +49,21 @@ input {
     border-color: var(--deep-red);
   }
 }
+.button {
+  border: 1px solid var(--red-light);
+  padding: 5px 10px;
+  font-size: rem(22);
+  border-radius: var(--br-30);
+  background-color: var(--background-color);
+  @include hover {
+    transform: scale(1.03);
+  }
+}
+@keyframes cubeAnimate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(400px - 105px));
+  }
+}

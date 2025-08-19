@@ -11,10 +11,10 @@ export default function Header() {
     setIsOpen(param);
   };
   return (
-    <header className={`${style.header} container`}>
+    <header className={`${style.header || ""} container`}>
       <Logo />
       <div
-        className={`${style["header__sub-container"]} ${
+        className={`${style["header__sub-container"] || ""} ${
           isOpen ? style["header__sub-container--opened"] : ""
         }`}
       >

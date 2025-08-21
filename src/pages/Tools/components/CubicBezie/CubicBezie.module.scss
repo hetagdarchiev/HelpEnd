@@ -1,0 +1,80 @@
+.cubic-bezier-simple {
+  display: inline-block;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coordinate-system {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+}
+
+.grid-background {
+  opacity: 0.6;
+}
+
+.axis-x, .axis-y {
+  stroke: #333;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.axis-tick {
+  stroke: #666;
+  stroke-width: 1.5;
+}
+
+.axis-label {
+  font-size: 10px;
+  fill: #666;
+  font-family: Arial, sans-serif;
+}
+
+.axis-title {
+  font-size: 14px;
+  fill: #333;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.bezier-curve {
+  fill: none;
+  stroke: #007bff;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.control-line {
+  stroke: #999;
+  stroke-width: 1.5;
+  stroke-dasharray: 4;
+  opacity: 0.7;
+}
+
+.control-point {
+  fill: #ff6b6b;
+  stroke: white;
+  stroke-width: 2;
+  cursor: move;
+  transition: all 0.2s ease;
+}
+
+.control-point:hover {
+  r: 7;
+  stroke-width: 3;
+}
+
+.anchor-point {
+  fill: #28a745;
+  stroke: white;
+  stroke-width: 2;
+  cursor: move;
+}
+
+.anchor-point:hover {
+  r: 7;
+  stroke-width: 3;
+}

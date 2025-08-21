@@ -4,6 +4,19 @@
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
+    gap: 20px;
+    &-controller {
+        &__wrapper {
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+                margin-bottom: 5px;
+            }
+        }
+    }
     &-monitor {
         max-width: 400px;
         min-width: 300px;
@@ -44,7 +57,7 @@
         aspect-ratio: 1;
         &::-webkit-scrollbar {
             width: 8px;
-            height: 8px; 
+            height: 15px;
         }
 
         &::-webkit-scrollbar-track {
@@ -62,16 +75,15 @@
         aspect-ratio: 1;
         background-color: var(--invert);
     }
-    &-duration {
-        &__button-group {
-            gap: 10px;
-            display: grid;
-            grid-template-columns: repeat(2, 250px);
-        }
-    }
     &-duration__container {
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+    .btn-group 
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
     }
 }

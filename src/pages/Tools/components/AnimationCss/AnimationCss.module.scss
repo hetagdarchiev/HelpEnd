@@ -2,9 +2,13 @@
 .animation {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    @include loptop {
+        flex-direction: column;
+        align-items: center;
+    }
     &-controller {
         &__wrapper {
             max-width: 500px;
@@ -32,6 +36,9 @@
             max-width: 500px;
             width: 100%;
             min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             textarea {
                 max-width: 400px;
                 padding: 5px 10px;
@@ -41,6 +48,17 @@
                 border-top: none;
                 display: block;
             }
+        }
+    }
+    &__copy-btn {
+        position: absolute;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        text-align: center;
+        @include hover {
+            transform: translateX(-50%) scale(1.03) !important;
         }
     }
     &-code {
@@ -54,7 +72,11 @@
         font-size: rem(22);
         font-style: italic;
         overflow-x: scroll;
-        aspect-ratio: 1;
+        height: 300px;
+        position: relative;
+        @include tablet {
+            font-size: rem(18);
+        }
         &::-webkit-scrollbar {
             width: 8px;
             height: 15px;
@@ -80,10 +102,9 @@
         align-items: center;
         gap: 10px;
     }
-    .btn-group 
-    {
+    .btn-group {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 5px;
     }
 }

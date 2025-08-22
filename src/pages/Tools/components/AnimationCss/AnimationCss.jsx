@@ -10,7 +10,7 @@ export default function AnimationCss() {
   const [timing, setTiming] = useState("ease");
   const [fillMode, setFillMode] = useState("none");
   let cubeRef = useRef(null);
-
+  let refCode = useRef(null);
   useEffect(() => {
     const element = cubeRef.current;
     if (element) {
@@ -28,6 +28,14 @@ export default function AnimationCss() {
     }
   }, [iteration, duration, direction, delay, timing, fillMode]);
 
+  async function copyToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log("Текст скопирован в буфер обмена");
+    } catch (err) {
+      console.error("Ошибка при копировании:", err);
+    }
+  }
   const animate = {
     animation: `cubeAnimate ${duration}s ${direction} ${iteration}`,
   };
@@ -58,7 +66,14 @@ export default function AnimationCss() {
           ></div>
         </div>
         <pre className={`${style["animation-code"]}`} name="code-css">
-          {userCode || "Youre code"}
+          <span ref={refCode}>{userCode || "Youre code"}</span>
+          <button
+            onClick={() => copyToClipboard(refCode.current.innerText)}
+            type="button"
+            className={`${style["animation__copy-btn"] || ""} button`}
+          >
+            Copy
+          </button>
         </pre>
       </div>
 
@@ -104,6 +119,7 @@ export default function AnimationCss() {
             }`}
           >
             <button
+              type="button"
               className={`${
                 style["animation-controller--normal"] || ""
               } button`}
@@ -113,6 +129,7 @@ export default function AnimationCss() {
               Normal
             </button>
             <button
+              type="button"
               className={`${style["animation-controller--reverse"] || ""}
               button`}
               onClick={() => setDirection("reverse")}
@@ -121,6 +138,7 @@ export default function AnimationCss() {
               Reverse
             </button>
             <button
+              type="button"
               className={`${style["animation-controller--alternate"] || ""}
               button`}
               onClick={() => setDirection("alternate")}
@@ -129,6 +147,7 @@ export default function AnimationCss() {
               Alternate
             </button>
             <button
+              type="button"
               className={`${
                 style["animation-controller--alternate-reverse"] || ""
               }
@@ -152,6 +171,7 @@ export default function AnimationCss() {
             value={iteration}
           />
           <button
+            type="button"
             className={`${
               style["animation__controller--infinity"] || ""
             }button`}
@@ -183,6 +203,7 @@ If the value is positive, there will be a delay before the animation starts. If 
             }`}
           >
             <button
+              type="button"
               className={`button`}
               onClick={() => setTiming("ease")}
               title="Standard smooth acceleration (default)"
@@ -190,6 +211,7 @@ If the value is positive, there will be a delay before the animation starts. If 
               ease
             </button>
             <button
+              type="button"
               className={`button`}
               onClick={() => setTiming("ease-in")}
               title="Smooth animation start (slow beginning)"
@@ -197,6 +219,7 @@ If the value is positive, there will be a delay before the animation starts. If 
               ease-in
             </button>
             <button
+              type="button"
               className={`button`}
               title="Smooth animation end (slow finish)"
               onClick={() => setTiming("ease-out")}
@@ -204,6 +227,7 @@ If the value is positive, there will be a delay before the animation starts. If 
               ease-out
             </button>
             <button
+              type="button"
               className={`button`}
               onClick={() => setTiming("ease-in-out")}
               title="Smooth start and end of animation"
@@ -211,6 +235,7 @@ If the value is positive, there will be a delay before the animation starts. If 
               ease-in-out
             </button>
             <button
+              type="button"
               className={`button`}
               onClick={() => setTiming("linear")}
               title="Constant speed without acceleration"
@@ -227,25 +252,33 @@ If the value is positive, there will be a delay before the animation starts. If 
               style["btn-group"] || ""
             }`}
           >
-            <button className={`button`}
+            <button
+              type="button"
+              className={`button`}
               title="animation styles are not applied before and after the animation is played (the default value)."
               onClick={() => setFillMode("none")}
             >
               none
             </button>
-            <button className={`button`}
+            <button
+              type="button"
+              className={`button`}
               onClick={() => setFillMode("forwards")}
               title="animation styles are not applied before and after the animation is played (the default value)."
             >
               forwards
             </button>
-            <button className={`button`}
+            <button
+              type="button"
+              className={`button`}
               onClick={() => setFillMode("backwards")}
               title="after the animation ends, the element will be styled with the styles of the first keyframe"
             >
               backwards
             </button>
-            <button className={`button`}
+            <button
+              type="button"
+              className={`button`}
               onClick={() => setFillMode("both")}
               title="the first keyframe is applied to the element before the animation begins, and the element remains in the state of the last keyframe after the animation ends."
             >

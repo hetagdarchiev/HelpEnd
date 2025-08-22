@@ -54,6 +54,7 @@ input {
   padding: 5px 10px;
   font-size: rem(22);
   border-radius: var(--br-30);
+  cursor: pointer;
   background-color: var(--background-color);
   @include hover {
     transform: scale(1.03);

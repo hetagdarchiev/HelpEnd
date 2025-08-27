@@ -1,0 +1,34 @@
+.shadow-generator {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 800px;
+    .box {
+        width: 400px;
+        padding: 1px;
+        aspect-ratio: 1;
+        background-color: var(--invert);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: auto;
+    }
+    .shadow-generator {
+        &__sub-container {
+            flex-basis: 300px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .contol {
+        flex-grow: 1;
+    }
+    .box__wrapper {
+        flex-grow: 1;
+    }
+    input[type="color"] {
+        border: none;
+    }
+}

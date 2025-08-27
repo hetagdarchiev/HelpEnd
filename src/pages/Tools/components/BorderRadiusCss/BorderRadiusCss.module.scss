@@ -3,12 +3,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
     &__value {
         text-align: center;
-        margin-bottom: 30px;
     }
-    &__box 
-    {
-        aspect-ratio: 1;
+    &__box {
+        aspect-ratio: 2/1.5;
     }
 }

@@ -7,6 +7,7 @@ import style from "./Header.module.scss";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  
   const hundleOpen = (param) => {
     setIsOpen(param);
   };

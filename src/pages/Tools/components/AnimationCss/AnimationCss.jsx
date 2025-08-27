@@ -11,6 +11,7 @@ export default function AnimationCss() {
   const [fillMode, setFillMode] = useState("none");
   let cubeRef = useRef(null);
   let refCode = useRef(null);
+  let copyRef = useRef(null);
   useEffect(() => {
     const element = cubeRef.current;
     if (element) {
@@ -31,8 +32,15 @@ export default function AnimationCss() {
   async function copyToClipboard(text) {
     try {
       await navigator.clipboard.writeText(text);
-      console.log("Текст скопирован в буфер обмена");
+      copyRef.current.style.borderColor = "var(--green)";
+      setTimeout(() => {
+        copyRef.current.style.borderColor = "var(--red-light)";
+      }, 500);
     } catch (err) {
+      copyRef.current.style.borderColor = "red";
+      setTimeout(() => {
+        copyRef.current.style.borderColor = "var(--red-light)";
+      }, 2000);
       console.error("Ошибка при копировании:", err);
     }
   }
@@ -68,6 +76,7 @@ export default function AnimationCss() {
         <pre className={`${style["animation-code"]}`} name="code-css">
           <span ref={refCode}>{userCode || "Youre code"}</span>
           <button
+            ref={copyRef}
             onClick={() => copyToClipboard(refCode.current.innerText)}
             type="button"
             className={`${style["animation__copy-btn"] || ""} button`}

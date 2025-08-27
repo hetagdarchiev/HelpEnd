@@ -1,4 +1,4 @@
-import style from "./SjadowGeneratorCss.module.scss";
+import style from "./ShadowGeneratorCss.module.scss";
 import Range from "../../../../components/Range/Range";
 import { useRef, useState } from "react";
 export default function ShadowGenerator() {
@@ -95,11 +95,13 @@ export default function ShadowGenerator() {
         </div>
         <div className={`code__wrapper`}>
           <pre className="code__text" ref={codeRef}>
-            {`
+            <code>
+              {`
     box-shadow: ${shadow};
     -webkit-box-shadow: ${shadow};
     -moz-box-shadow: ${shadow};
-            `}
+    `}
+            </code>
           </pre>
           <button onClick={() => CopyRited(codeRef)} type="button">
             Copy

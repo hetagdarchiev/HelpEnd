@@ -1,11 +1,20 @@
+@use "../../../../styles/helpers/" as *;
 .shadow-generator {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     height: 800px;
+    margin-bottom: 100px;
+    @include bLoptop {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 100px;
+        width: 100%;
+    }
     .box {
-        width: 400px;
+        max-width: 400px;
+        width: 100%;
         padding: 1px;
         aspect-ratio: 1;
         background-color: var(--invert);
@@ -13,6 +22,10 @@
         align-items: center;
         justify-content: center;
         margin-inline: auto;
+        @include bLoptop 
+        {
+            width: 50%;
+        }
     }
     .shadow-generator {
         &__sub-container {
@@ -24,11 +37,24 @@
     }
     .contol {
         flex-grow: 1;
+        @include bLoptop {
+            width: 100%;
+            max-width: 500px;
+        }
     }
     .box__wrapper {
         flex-grow: 1;
+        @include bLoptop 
+        {
+            max-width: 400px;
+            width: 100%;
+        }
     }
     input[type="color"] {
         border: none;
+    }
+    .code__text 
+    {
+        width: 100%;
     }
 }

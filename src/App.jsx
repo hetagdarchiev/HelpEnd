@@ -11,7 +11,7 @@ import Animation from "./pages/Tools/components/AnimationCss/AnimationCss";
 import PxToRem from "./pages/Tools/components/PxToRem/PxToRem.jsx";
 import BorderRadius from "./pages/Tools/components/BorderRadiusCss/BorderRadiusCss";
 import CubicBezie from "./pages/Tools/components/CubicBezie/CubicBezie.jsx";
-import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/SjadowGeneratorCss.jsx";
+import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/ShadowGeneratorCss.jsx";
 
 function App() {
   return (

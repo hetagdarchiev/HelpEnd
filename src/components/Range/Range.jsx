@@ -7,7 +7,9 @@ export default function Range({
   minValue = 0,
   title = "range",
   stepValue = 1,
-  defaultValue = 0
+  defaultValue = 0,
+  val = false,
+  id = "",
 }) {
   const [value, setValue] = useState(defaultValue);
 
@@ -22,11 +24,12 @@ export default function Range({
       <input
         type="range"
         onChange={handleChange}
-        value={value}
+        value={val ? val : value}
         min={minValue}
         title={title}
         max={maxValue}
         step={stepValue}
+        id={id}
         className={`${className || ""} ${styl["range"]}`}
       />
     </>

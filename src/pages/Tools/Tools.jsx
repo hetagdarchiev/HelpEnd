@@ -4,28 +4,13 @@ export default function FuncName() {
   return (
     <ul className={`${style["tools__list"]} container`}>
       <li>
-        <Link className={`button`} to={"/borderRadius"}>
-          Border Radius
-        </Link>
-      </li>
-      <li>
-        <Link className={`button`} to={"/pxToRem"}>
-          Px to rem
-        </Link>
-      </li>
-      <li>
         <Link className={`button`} to={"/animationCss"}>
           Animation Helper
         </Link>
       </li>
       <li>
-        <Link className={`button`} to={"/shadowGenerator"}>
-          Shadow Generator
-        </Link>
-      </li>
-      <li>
-        <Link className={`button`} to={"/cubicBezie"}>
-          Cubic Bezie
+        <Link className={`button`} to={"/borderRadius"}>
+          Border Radius
         </Link>
       </li>
       <li>
@@ -33,6 +18,21 @@ export default function FuncName() {
           Gradient Generator
         </Link>
       </li>
+      <li>
+        <Link className={`button`} to={"/pxToRem"}>
+          Px to Rem
+        </Link>
+      </li>
+      <li>
+        <Link className={`button`} to={"/shadowGenerator"}>
+          Shadow Generator
+        </Link>
+      </li>
+      {/* <li>
+        <Link className={`button`} to={"/cubicBezie"}>
+          Cubic Bezie
+        </Link>
+      </li> */}
       <li>
         <Link className={`button`}></Link>
       </li>

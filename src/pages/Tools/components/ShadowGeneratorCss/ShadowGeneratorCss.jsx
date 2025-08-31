@@ -21,61 +21,70 @@ export default function ShadowGenerator() {
   const handleStretchinglValue = (param) => {
     setStretching(param);
   };
-  async function CopyRited(text) {
+  async function CopyRited(text, e) {
+    const btn = e.currentTarget;
     try {
       let property = text.current;
       await navigator.clipboard.writeText(property.innerText);
+      btn.style.borderColor = "green";
+      setTimeout(() => {
+        btn.style.borderColor = "var(--red-light)";
+      }, 1000);
     } catch (error) {
       console.log(error);
+      btn.style.borderColor = "red";
+      setTimeout(() => {
+        btn.style.borderColor = "var(--red-light)";
+      }, 1000);
     }
   }
   const shadow = `${horizontal}px ${vertical}px ${blur}px ${stretching}px ${shadowColor}`;
   return (
     <section className={`${style["shadow-generator"] || " "} container`}>
-      <div className={`${style["box__wrapper"]}`}>
+      <div className={`${style["box__wrapper"] || ""}`}>
         <div
           style={{ boxShadow: shadow, backgroundColor: boxColor }}
           className={`${style["box"] || " "}`}
         ></div>
       </div>
-      <div className={`${style["contol"]}`}>
-        <div className={`${style["shadow-generator__sub-container"]}`}>
+      <div className={`${style["contol"] || ""}`}>
+        <div className={`${style["shadow-generator__sub-container"] || ""}`}>
           <div>Horizontal displacement: {horizontal}px</div>
           <Range
             minValue={-200}
             maxValue={200}
             rangeValueFunc={handleHorizontalValue}
-            className={`${style["range"]}`}
+            className={`${style["range"] || ""}`}
           />
         </div>
-        <div className={`${style["shadow-generator__sub-container"]}`}>
+        <div className={`${style["shadow-generator__sub-container"] || ""}`}>
           <div>Vertical displacement: {vertical}px</div>
           <Range
             minValue={-200}
             maxValue={200}
             rangeValueFunc={handleVerticalValue}
-            className={`${style["range"]}`}
+            className={`${style["range"] || ""}`}
           />
         </div>
-        <div className={`${style["shadow-generator__sub-container"]}`}>
+        <div className={`${style["shadow-generator__sub-container"] || ""}`}>
           <div>Blur value: {blur}px</div>
           <Range
             minValue={0}
             maxValue={200}
             rangeValueFunc={handleBlurlValue}
-            className={`${style["range"]}`}
+            className={`${style["range"] || ""}`}
           />
         </div>
-        <div className={`${style["shadow-generator__sub-container"]}`}>
+        <div className={`${style["shadow-generator__sub-container"] || ""}`}>
           <div>Stretching value: {stretching}px</div>
           <Range
             minValue={-200}
             maxValue={200}
             rangeValueFunc={handleStretchinglValue}
-            className={`${style["range"]}`}
+            className={`${style["range"] || ""}`}
           />
         </div>
-        <div className={`${style["shadow-generator__sub-container"]}`}>
+        <div className={`${style["shadow-generator__sub-container"] || ""}`}>
           <div>Shadow color value: {shadowColor}</div>
           <input
             type="color"
@@ -97,13 +106,17 @@ export default function ShadowGenerator() {
           <pre className="code__text" ref={codeRef}>
             <code>
               {`
-    box-shadow: ${shadow};
-    -webkit-box-shadow: ${shadow};
-    -moz-box-shadow: ${shadow};
+  box-shadow: ${shadow};
+  -webkit-box-shadow: ${shadow};
+  -moz-box-shadow: ${shadow};
     `}
             </code>
           </pre>
-          <button onClick={() => CopyRited(codeRef)} type="button">
+          <button
+            className={`${style["copy__btn"] || ""}`}
+            onClick={(e) => CopyRited(codeRef, e)}
+            type="button"
+          >
             Copy
           </button>
         </div>

@@ -12,6 +12,7 @@ import PxToRem from "./pages/Tools/components/PxToRem/PxToRem.jsx";
 import BorderRadius from "./pages/Tools/components/BorderRadiusCss/BorderRadiusCss";
 import CubicBezie from "./pages/Tools/components/CubicBezie/CubicBezie.jsx";
 import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/ShadowGeneratorCss.jsx";
+import Gradient from "./pages/Tools/components/GradientGenerator/GradientGenerator.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/animationCss" element={<Animation />} />
           <Route path="/cubicBezie" element={<CubicBezie />} />
           <Route path="/shadowGenerator" element={<ShadowGeneratorCss />} />
+          <Route path="/gradientGenerator" element={<Gradient />} />
         </Routes>
       </BrowserRouter>
     </>

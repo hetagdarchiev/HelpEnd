@@ -59,9 +59,9 @@ export default function PxToRem() {
         <div className={`${style["pix-to-rem__input-wrapper"] || ""}`}>
           <input
             className={`${style["pix-to-rem__input"] || ""}`}
-            type="number"
+            type="button"
             id="px-to-rem__fital-value"
-            value={resultValue}
+            value={resultValue ? resultValue : ""}
             readOnly={true}
             tabIndex={-1}
           />

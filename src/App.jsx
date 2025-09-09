@@ -13,7 +13,7 @@ import BorderRadius from "./pages/Tools/components/BorderRadiusCss/BorderRadiusC
 import CubicBezie from "./pages/Tools/components/CubicBezie/CubicBezie.jsx";
 import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/ShadowGeneratorCss.jsx";
 import Gradient from "./pages/Tools/components/GradientGenerator/GradientGenerator.jsx";
-
+import Flex from './pages/Tools/components/Flex/Flex.jsx'
 function App() {
   return (
     <>
@@ -31,6 +31,7 @@ function App() {
           <Route path="/cubicBezie" element={<CubicBezie />} />
           <Route path="/shadowGenerator" element={<ShadowGeneratorCss />} />
           <Route path="/gradientGenerator" element={<Gradient />} />
+          <Route path="/flexGenerator" element={<Flex />} />
         </Routes>
       </BrowserRouter>
     </>

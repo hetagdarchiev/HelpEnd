@@ -43,6 +43,13 @@
     }
     &__sub-container--opened {
         @include tablet {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100vh;
+            background: #111;
+            overflow: hidden;
+            z-index: 1000;
             nav,
             button {
                 display: block;

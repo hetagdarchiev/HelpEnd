@@ -50,7 +50,7 @@ export default function AnimationCss() {
 
   let userCode = [
     name ? `animation-name: ${name};` : "",
-    iteration ? `animation-iteration-count: ${iteration}` : "",
+    iteration ? `animation-iteration-count: ${iteration};` : "",
     duration ? `animation-duration: ${duration}s;` : "",
     direction ? `animation-direction: ${direction};` : "",
     delay ? `animation-delay: ${delay}s;` : "",

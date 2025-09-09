@@ -1,0 +1,17 @@
+.flex {
+    &__monitor {
+        display: flex;
+        gap: 10px;
+        border: 4px solid var(--border-color);
+        border-radius: var(--br-30);
+        padding: 10px;
+        max-height: 400px;
+        min-height: 200px;
+        div {
+            width: 100px;
+            aspect-ratio: 1;
+            background-color: var(--invert);
+            border-radius: var(--br-30);
+        }
+    }
+}

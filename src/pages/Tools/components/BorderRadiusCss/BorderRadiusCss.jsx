@@ -9,6 +9,22 @@ export default function BorderRadius() {
     setRadius(`${numericValue}px`);
   };
 
+  const CopyRight = async function (btn) {
+    try {
+      await navigator.clipboard.writeText(`border-radius: ${btn.value};`);
+      btn.style.borderColor = "green";
+      setTimeout(() => {
+        btn.style.borderColor = "var(--red-light)";
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+      btn.style.borderColor = "red";
+      setTimeout(() => {
+        btn.style.borderColor = "var(--red-light)";
+      }, 1000);
+    }
+  };
+
   const handleValueRangeProcent = (param) => {
     const numericValue = Math.max(0, parseInt(param, 10));
     setRadius(`${numericValue}%`);
@@ -18,12 +34,13 @@ export default function BorderRadius() {
     <section className={`${style["border-radius"] || ""} container`}>
       <input
         className={`${style["border-radius__value"] || ""}`}
-        type="text"
+        type="button"
         onChange={(e) => {
           setRadius(e.target.value);
         }}
         value={radius}
         title="The string with the value"
+        onClick={(e) => CopyRight(e.target)}
       />
       <Range
         maxValue={250}

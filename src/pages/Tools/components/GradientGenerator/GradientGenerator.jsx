@@ -27,8 +27,8 @@ export default function Gradient() {
     setRightProcentColor(param);
   };
   return (
-    <section className={`${styl["gradient"]}`}>
-      <div className={`${styl["gradient__monitor"]}`} style={styleObject}>
+    <section className={`${styl["gradient"] || ""}`}>
+      <div className={`${styl["gradient__monitor"] || ""}`} style={styleObject}>
         {!radialGradient && (
           <svg
             width="800px"
@@ -50,13 +50,14 @@ export default function Gradient() {
       <label htmlFor="gradient__direction">{direction}deg</label>
       <Range
         maxValue={360}
+        minValue={radialGradient ? -360 : 0}
         title="rotate"
-        className={`${styl["gradient__direction"]}`}
+        className={`${styl["gradient__direction"] || ""}`}
         id="gradient__direction"
         rangeValueFunc={handleDirection}
         val={direction}
       />
-      <div className={`${styl["gradient__colors"]}`}>
+      <div className={`${styl["gradient__colors"] || ""}`}>
         <div>
           <Range
             rangeValueFunc={handleLeftProcentColor}
@@ -71,6 +72,7 @@ export default function Gradient() {
             }}
             value={leftColor}
             title="set first color"
+            className={`${styl["color-first"] || ""}`}
           />
         </div>
         <div>
@@ -85,11 +87,12 @@ export default function Gradient() {
               setRightColor(e.target.value);
             }}
             title="set last color"
+            className={`${styl["color-last"] || ""}`}
             value={rightColor}
           />
         </div>
       </div>
-      <div className={`${styl["gradient__type"]}`}>
+      <div className={`${styl["gradient__type"] || ""}`}>
         <button
           type="button"
           className={`button`}
@@ -109,6 +112,11 @@ export default function Gradient() {
           title="set linear type"
         >
           Linear gradient
+        </button>
+      </div>
+      <div>
+        <button className={`button`}>
+          background: {Object.values(styleObject)};
         </button>
       </div>
     </section>

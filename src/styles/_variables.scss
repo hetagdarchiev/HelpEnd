@@ -12,7 +12,7 @@
   --deep-red: rgb(92, 31, 31);
   //theme
   --background-color: var(--light);
-  --border-color: var(--gray);
+  --border-color: var(--red-light);
   --text-color: var(--red-light);
 
   //other
@@ -21,11 +21,12 @@
   --tr-fast: 0.1s ease-in;
   --tr-middle: 0.25s ease-in;
   --tr-slow: 0.4s ease-in;
+  --f-weight: 700;
 }
 
 body.dark {
   --background-color: var(--dark);
-  --border-color: var(--deep-red);
   --text-color: var(--light);
   --invert: var(--light);
+  --f-weight: 400;
 }

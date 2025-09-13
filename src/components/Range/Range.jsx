@@ -10,6 +10,7 @@ export default function Range({
   defaultValue = 0,
   val = false,
   id = "",
+  style = "",
 }) {
   const [value, setValue] = useState(defaultValue);
 
@@ -30,6 +31,7 @@ export default function Range({
         max={maxValue}
         step={stepValue}
         id={id}
+        style={style || undefined}
         className={`${className || ""} ${styl["range"]}`}
       />
     </>

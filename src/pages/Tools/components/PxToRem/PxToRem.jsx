@@ -1,9 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./PxToRem.module.scss";
 export default function PxToRem() {
   const [userValue, setUserValue] = useState();
   const [defaultValue, setDefaultValue] = useState(16);
   const [resultValue, setResultValue] = useState();
+  const [borderColorSet, setBorderColorSet] = useState(false);
+  const refBtn = useRef(null);
+  async function CopyRight(obj) {
+    obj = obj.current;
+
+    if (!obj || !obj.value) {
+      console.warn("Элемент не найден или не содержит текста для копирования");
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(obj.value);
+      setBorderColorSet(true);
+      setTimeout(() => {
+        setBorderColorSet(false);
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   const handleChange = (stateFunc) => (e) => {
     if (e.target.value > 100000) {
       alert(
@@ -64,6 +83,12 @@ export default function PxToRem() {
             value={resultValue ? resultValue : ""}
             readOnly={true}
             tabIndex={-1}
+            ref={refBtn}
+            onClick={() => CopyRight(refBtn)}
+            style={{
+              borderColor: borderColorSet ? "green" : "var(--red-light)",
+              cursor: "pointer"
+            }}
           />
           <label
             className={`${style["pix-to-rem__input-title"] || ""}`}

@@ -41,6 +41,7 @@ export default function BorderRadius() {
         value={radius}
         title="The string with the value"
         onClick={(e) => CopyRight(e.target)}
+        style={{cursor: "pointer"}}
       />
       <Range
         maxValue={250}

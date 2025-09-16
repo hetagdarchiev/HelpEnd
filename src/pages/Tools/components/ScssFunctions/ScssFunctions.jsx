@@ -1,0 +1,33 @@
+import Code from "../../../../components/CodePreview/CodePreview";
+export default function ScssFunc(params) {
+  return (
+    <section>
+      <Code title={"Fluid Text"}>
+        {`
+@function fluid($max: 100, $min: 16) {
+    $maxViewportWidth: 1920;
+    $minViewportWidth: 360;
+    $maxSize: math.div($max, 16);
+    $minSize: math.div($min, 16);
+    $maxWidth: math.div($maxViewportWidth, 16);
+    $minWidth: math.div($minViewportWidth, 16);
+    $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+    $yAxisIntersection: -$minWidth * $slope + $minSize;
+    @return clamp(
+        #{$minSize * 1rem},
+        #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+        #{$maxSize * 1rem}
+        );
+    }
+`}
+      </Code>
+      <Code title={"Pix To Rem"}>
+        {`
+@function rem($px,$min:16) {
+    @return math.div($px , $min) * 1rem
+    }
+`}
+      </Code>
+    </section>
+  );
+}

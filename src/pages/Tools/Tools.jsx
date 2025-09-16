@@ -5,8 +5,8 @@ export default function ToolsList() {
   return (
     <nav aria-label="CSS инструменты">
       <div className={`${style["tools__container"]} container`}>
-        <fieldset style={{ width: "100%" }}>
-          <legend>CSS Tools</legend>
+        <fieldset >
+          <legend>CSS </legend>
           <ul className={style["tools__list"]}>
             <li>
               <Link className={`button`} to={"/animationCss"}>
@@ -43,6 +43,14 @@ export default function ToolsList() {
                 Cubic Bezier
               </Link>
             </li> */}
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Scss</legend>
+          <ul className={`${style["tools__list"]}`}>
+            <li>
+              <Link to={"/funcScss"} className={`button`}>Functions</Link>
+            </li>
           </ul>
         </fieldset>
       </div>

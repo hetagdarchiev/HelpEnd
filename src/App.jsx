@@ -14,6 +14,7 @@ import CubicBezie from "./pages/Tools/components/CubicBezie/CubicBezie.jsx";
 import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/ShadowGeneratorCss.jsx";
 import Gradient from "./pages/Tools/components/GradientGenerator/GradientGenerator.jsx";
 import Flex from './pages/Tools/components/Flex/Flex.jsx'
+import ScssFunc from './pages/Tools/components/ScssFunctions/ScssFunctions.jsx'
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
           <Route path="/shadowGenerator" element={<ShadowGeneratorCss />} />
           <Route path="/gradientGenerator" element={<Gradient />} />
           <Route path="/flexGenerator" element={<Flex />} />
+          <Route path="/funcScss" element={<ScssFunc />} />
         </Routes>
       </BrowserRouter>
     </>

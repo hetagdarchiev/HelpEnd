@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Range from "../../../../components/Range/Range";
 import styl from "./GradientGenerator.module.scss";
 export default function Gradient() {
@@ -8,6 +8,20 @@ export default function Gradient() {
   const [rightColor, setRightColor] = useState("#000000");
   const [rightProcentColor, setRightProcentColor] = useState(100);
   const [radialGradient, setRadialGradient] = useState(false);
+  const [borderColorSet, setBorderColorSet] = useState(false);
+  const refBtn = useRef(null);
+  async function CopyRight(obj) {
+    obj = obj.current;
+    try {
+      await navigator.clipboard.writeText(obj.innerText);
+      setBorderColorSet(true);
+      setTimeout(() => {
+        setBorderColorSet(false);
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   let styleObject = {
     background: radialGradient
       ? `radial-gradient(circle at ${direction}% 50%, 
@@ -115,7 +129,14 @@ export default function Gradient() {
         </button>
       </div>
       <div>
-        <button className={`button`}>
+        <button
+          ref={refBtn}
+          className={`button`}
+          onClick={() => CopyRight(refBtn)}
+          style={{
+            borderColor: borderColorSet ? "green" : "var(--red-light)",
+          }}
+        >
           background: {Object.values(styleObject)};
         </button>
       </div>

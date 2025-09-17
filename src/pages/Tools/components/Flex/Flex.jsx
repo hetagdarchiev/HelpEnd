@@ -11,7 +11,6 @@ export default function Flex() {
   const [flexShrink, setFlexShrink] = useState([1, 1, 1]);
   const [flexBasis, setFlexBasis] = useState([0, 0, 0]);
   const [order, setOrder] = useState([0, 0, 0]);
-  const [flex, setFlex] = useState([1, 1, 1]);
   const [width, setWidth] = useState("65");
   const styleObject = {
     flexDirection: direction,

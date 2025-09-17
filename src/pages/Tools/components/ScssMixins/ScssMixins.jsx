@@ -1,0 +1,45 @@
+import Code from "../../../../components/CodePreview/CodePreview";
+export default function Mixins(params) {
+  return (
+    <section>
+      <Code title={"hidden & visible"}>
+        {`@mixin toggle-hide($bool: false) {
+  @if ($bool) {
+    display: block;
+  } @else {
+    display: none;
+  }
+}`}
+      </Code>
+      <Code title={"Absolute center"}>
+        {`@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}`}
+      </Code>
+      <Code title={"absolute hidden"}>
+        {`@mixin absolute-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}`}
+      </Code>
+      <Code title={"Calculating the width of the container"}>
+        {`@mixin container($width,$padd) {
+  max-width: $width + ($padd*2)+px;
+  margin-inline: auto;
+  padding-inline: $padd+px;
+}`}
+      </Code>
+    </section>
+  );
+}

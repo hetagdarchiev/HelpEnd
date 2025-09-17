@@ -37,6 +37,10 @@
             animation: wordsUpper 1.7s ease;
         }
     }
+    .title 
+    {
+        margin-bottom: 0;
+    }
 }
 @keyframes wordsUpper {
     from {

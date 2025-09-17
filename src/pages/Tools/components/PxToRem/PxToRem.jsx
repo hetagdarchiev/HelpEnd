@@ -14,7 +14,7 @@ export default function PxToRem() {
       return;
     }
     try {
-      await navigator.clipboard.writeText(obj.value);
+      await navigator.clipboard.writeText(`${obj.value}rem`);
       setBorderColorSet(true);
       setTimeout(() => {
         setBorderColorSet(false);

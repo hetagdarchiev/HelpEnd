@@ -13,13 +13,15 @@ import BorderRadius from "./pages/Tools/components/BorderRadiusCss/BorderRadiusC
 import CubicBezie from "./pages/Tools/components/CubicBezie/CubicBezie.jsx";
 import ShadowGeneratorCss from "./pages/Tools/components/ShadowGeneratorCss/ShadowGeneratorCss.jsx";
 import Gradient from "./pages/Tools/components/GradientGenerator/GradientGenerator.jsx";
-import Flex from './pages/Tools/components/Flex/Flex.jsx'
-import ScssFunc from './pages/Tools/components/ScssFunctions/ScssFunctions.jsx'
+import Flex from "./pages/Tools/components/Flex/Flex.jsx";
+import ScssFunc from "./pages/Tools/components/ScssFunctions/ScssFunctions.jsx";
+import ScssMixin from "./pages/Tools/components/ScssMixins/ScssMixins.jsx";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header />
+        
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/tools" element={<Tools />} />
@@ -34,6 +36,7 @@ function App() {
           <Route path="/gradientGenerator" element={<Gradient />} />
           <Route path="/flexGenerator" element={<Flex />} />
           <Route path="/funcScss" element={<ScssFunc />} />
+          <Route path="/mixinsScss" element={<ScssMixin />} />
         </Routes>
       </BrowserRouter>
     </>

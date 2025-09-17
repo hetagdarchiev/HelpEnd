@@ -1,0 +1,12 @@
+@use "../../styles/helpers/" as *;
+.list {
+    font-size: rem(22);
+    li {
+        list-style: decimal;
+        margin-bottom: 10px;
+    }
+    span 
+    {
+        margin-left: 10px;
+    }
+}

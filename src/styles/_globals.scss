@@ -18,11 +18,13 @@ h1 {
   font-size: rem(72);
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 40px;
   @include loptop {
     font-size: rem(62);
   }
   @include tablet {
     font-size: rem(32);
+    margin-bottom: 10px;
   }
 }
 h2 {

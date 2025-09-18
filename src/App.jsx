@@ -19,7 +19,7 @@ import ScssMixin from "./pages/Tools/components/ScssMixins/ScssMixins.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/HelpEnd">
+      <BrowserRouter basename="https://hetagdarchiev.github.io/HelpEnd/">
         <Header />
 
         <Routes>

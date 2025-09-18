@@ -48,19 +48,20 @@ Frontend: HTML5, CSS3, JavaScript (ES6+)
 Предварительные требования: Убедитесь, что на вашем компьютере установлены Node.js (версия LTS) и npm или yarn.
 
 Клонируйте репозиторий:
-<code>
-bash
+`bash
 git clone https://github.com/your-username/frontend-helper.git
-cd frontend-helper
-</code>
+cd frontend-helper`
 Установите зависимости:
 
-<code>
-    bash
-    npm install
-</code>
+`    
+bash
+npm install
+`
+
 # или
-<code>yarn install</code>
+
+<code>
+yarn install</code>
 
 Запустите сервер для разработки:
 <code>

@@ -29,7 +29,7 @@ Copy the generated code to the clipboard with one button.
 
 Paste the code into your project and enjoy the time you've saved!
 
-<h2>, Technologies</h2>
+<h2>Technologies</h2>
 This project was created using the following technologies:
 
 Frontend: HTML5, CSS3, JavaScript (ES6+)

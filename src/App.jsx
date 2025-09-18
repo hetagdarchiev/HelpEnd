@@ -19,7 +19,7 @@ import ScssMixin from "./pages/Tools/components/ScssMixins/ScssMixins.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/HelpEnd">
         <Header />
 
         <Routes>

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hetagdarchiev.github.io/HelpEnd/",
+  "homepage": "https://hetagdarchiev.github.io/HelpEnd",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

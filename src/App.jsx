@@ -21,8 +21,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        
+
         <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/about" element={<About />} />

@@ -1,6 +1,6 @@
 import DonateImg from "../../assets/img/donateQr.png";
 import classes from "./About.module.scss";
-export default function FuncName(params) {
+export default function FuncName() {
   return (
     <section className={`${classes.about || "about"} container`}>
       <div>

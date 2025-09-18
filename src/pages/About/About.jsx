@@ -1,4 +1,6 @@
 import DonateImg from "../../assets/img/donateQr.png";
+import SbpDonate from "../../assets/img/SbpPay.png";
+import BoostyDonate from "../../assets/img/boosty.png";
 import classes from "./About.module.scss";
 export default function FuncName() {
   return (
@@ -33,16 +35,42 @@ export default function FuncName() {
         <p>
           &emsp; Nevertheless, despite the above, if you have an urgent desire
           to provide financial support to this project, you have the opportunity
-          to make a donation through the Donation Alerts platform.
+          to make a donation.
         </p>
-        <a
-          href="https://www.donationalerts.com/r/khetg "
-          className={`${classes.donate__link || ""} button`}
-          target="_blank"
-          title="Donate"
-        >
-          <img src={DonateImg} width={""} loading={"lazy"} />
-        </a>
+        <div className={`${classes.donate__group}`}>
+          <div>
+            <label htmlFor="donation-alerts">Donation Alerts</label>
+            <a
+              href="https://www.donationalerts.com/r/khetg "
+              className={`${classes.donate__link || ""} button`}
+              target="_blank"
+              title="Donate"
+              id="donation-alerts"
+            >
+              <img src={DonateImg} loading={"lazy"} />
+            </a>
+          </div>
+          <div>
+            <label htmlFor="sbp">Sber Bank(SBP)</label>
+            <a
+              href="https://www.sberbank.com/sms/pbpn?requisiteNumber=79064954532"
+              target="_blank"
+              className={`${classes.donate__link || ""} button`}
+            >
+              <img src={SbpDonate} loading={"lazy"} />
+            </a>
+          </div>
+          <div>
+            <label htmlFor="boosty">Boosty</label>
+            <a
+              href="https://boosty.to/voyageralone/donate"
+              target="_blank"
+              className={`${classes.donate__link || ""} button`}
+            >
+              <img src={BoostyDonate} loading={"lazy"} />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

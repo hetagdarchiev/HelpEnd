@@ -1,6 +1,9 @@
 @use "../../styles/helpers/" as *;
 .about {
     font-size: rem(22);
+    label {
+        margin-inline: auto;
+    }
     div {
         border: 1px dotted var(--text-color);
         border-radius: var(--br-30);
@@ -10,20 +13,40 @@
         }
     }
     .donate {
-        &__link
-        {
+        &__group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                flex-shrink: 0;
+                max-width: 450px;
+                width: 100%;
+                gap: 10px;
+                justify-content: center;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__link {
             display: block;
             text-align: center;
-            width: 500px;
+            max-width: 400px;
+            width: 100%;
+            min-width: 200px;
+            aspect-ratio: 1;
             margin-inline: auto;
             padding: 20px;
-            @include tablet 
-            {
-                width: 300px;
+            @include tablet {
+                max-width: 300px;
             }
-            @include mobile 
-            {
-                width: 200px;
+            @include mobile {
+                max-width: 200px;
             }
         }
         p {

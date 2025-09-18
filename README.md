@@ -49,46 +49,55 @@ Prerequisites: Make sure that Node is installed on your computer.js and npm or y
 
 Clone the repository:
 
-````bash
+```bash
 git clone https://github.com/hetagdarchiev/HelpEnd.git
-cd frontend-helper```
-````
+cd frontend-helper
+```
 
 Install the dependencies:
 
-````
-bash
-npm install```
+```bash
+npm install`
+```
 
 # or
 
-```yarn install```
+```bash
+yarn install
+```
 
 Start the server for development:
+
 ```bash
-npm run dev```
+npm run dev
+```
 
 # or
 
-```yarn dev```
+```bash
+yarn dev
+```
 
-The website will be available at ```http://localhost:3000 (or on another port that your build environment specifies).
+The website will be available at `http://localhost:3000 (or on another port that your build environment specifies).
 Assemble a project for production:
 
 ```bash
-npm run build  ```
+npm run build
+```
 
 # or
 
-```yarn build```
+```bash
+yarn build
+```
 
 <p>🤝 How to contribute</p>
 We welcome any contributions to the development of the project! Can you help:
 
 <ul>
     <li>By reporting bugs and suggesting new features via <a href="https://t.me/IIddeeaas ">telegram</a>.</li>
-<li>Offering new tools or cheat sheets.</li>
-    <li>Improving existing code or design.</li>
+<li>Offering new tools or cheat sheets.</li>    
+    <li>Improving existing code or design.</li>    
     <li>Correcting typos and improving documentation.</li>
 </ul>
 
@@ -105,4 +114,3 @@ Find us on Twitter: @yourhandle
 
 <h2>🙏 Thanks</h2>
 The icons are provided by Font Awesome/Feather Icons.
-````

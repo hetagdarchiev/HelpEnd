@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
 import "./index.scss";
 
@@ -19,7 +19,7 @@ import ScssMixin from "./pages/Tools/components/ScssMixins/ScssMixins.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path="/funcScss" element={<ScssFunc />} />
           <Route path="/mixinsScss" element={<ScssMixin />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

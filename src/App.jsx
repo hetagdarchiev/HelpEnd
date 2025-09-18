@@ -19,9 +19,8 @@ import ScssMixin from "./pages/Tools/components/ScssMixins/ScssMixins.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter basename="https://hetagdarchiev.github.io/HelpEnd/">
+      <BrowserRouter>
         <Header />
-
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />

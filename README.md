@@ -3,7 +3,7 @@
 Frontend Helper is a collection of useful tools, cheat sheets, and code generators designed to speed up and simplify your daily frontend development. You no longer need to waste time searching for the right snippet or memorizing all CSS properties - we did it for you!
 </p>
 
-🌐 <a href="https://help-end.vercel.app/home">Open a Website</a> | <a href="https://t.me/IIddeeaas ">Report an error</a> | <a href="https://t.me/IIddeeaas ">Suggest an idea</a>
+🌐 <a href="https://help-end.vercel.app/#/home">Open a Website</a> | <a href="https://t.me/IIddeeaas ">Report an error</a> | <a href="https://t.me/IIddeeaas ">Suggest an idea</a>
 
 <h2>✨ Features</h2>
 Our website offers a wide range of tools, divided into categories:

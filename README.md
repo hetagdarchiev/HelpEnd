@@ -6,10 +6,10 @@ Frontend Helper is a collection of useful tools, cheat sheets, and code generato
 🌐 <a href="https://help-end.vercel.app/home">Open a Website</a> | <a href="https://t.me/IIddeeaas ">Report an error</a> | <a href="https://t.me/IIddeeaas ">Suggest an idea</a>
 
 <h2>✨ Features</h2>
-Our website offers a wide range of tools, divided into categories.:
+Our website offers a wide range of tools, divided into categories:
 
 <h2>🎨 CSS shadow generators</h2>
-: Visually create a perfect box-shadow or text-shadow and copy the finished code.
+Visually create a perfect box-shadow or text-shadow and copy the finished code.
 
 Gradients: Create and customize a beautiful CSS gradient using an intuitive interface.
 
@@ -48,45 +48,47 @@ If you want to contribute or just see how things work from the inside, follow th
 Prerequisites: Make sure that Node is installed on your computer.js and npm or yarn.
 
 Clone the repository:
-`bash
-git clone https://github.com/your-username/frontend-helper.git
-cd frontend-helper`
-`
+
+````bash
+git clone https://github.com/hetagdarchiev/HelpEnd.git
+cd frontend-helper```
+````
+
 Install the dependencies:
 
-`   
+````
 bash
-npm install`
+npm install```
 
 # or
 
-`yarn install`
+```yarn install```
 
 Start the server for development:
-`bash
-npm run dev`
+```bash
+npm run dev```
 
 # or
 
-`yarn dev`
+```yarn dev```
 
-The website will be available at `http://localhost:3000 (or on another port that your build environment specifies).
+The website will be available at ```http://localhost:3000 (or on another port that your build environment specifies).
 Assemble a project for production:
 
-`bash
-npm run build  `
+```bash
+npm run build  ```
 
 # or
 
-`yarn build`
+```yarn build```
 
 <p>🤝 How to contribute</p>
 We welcome any contributions to the development of the project! Can you help:
 
 <ul>
     <li>By reporting bugs and suggesting new features via <a href="https://t.me/IIddeeaas ">telegram</a>.</li>
-<li>Offering new tools or cheat sheets.</li>    
-    <li>Improving existing code or design.</li>    
+<li>Offering new tools or cheat sheets.</li>
+    <li>Improving existing code or design.</li>
     <li>Correcting typos and improving documentation.</li>
 </ul>
 
@@ -101,5 +103,6 @@ Write to us in telegram: [text](https://t.me/IIddeeaas)
 Create an issue in GitHub.
 Find us on Twitter: @yourhandle
 
-<h2>, Thanks</h2>
+<h2>🙏 Thanks</h2>
 The icons are provided by Font Awesome/Feather Icons.
+````

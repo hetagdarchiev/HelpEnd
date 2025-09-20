@@ -2,11 +2,20 @@
 .list {
     font-size: rem(22);
     li {
-        list-style: decimal;
+        position: relative;
         margin-bottom: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -15px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--text-color);
+        }
     }
-    span 
-    {
+    span {
         margin-left: 10px;
     }
 }

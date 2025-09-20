@@ -13,7 +13,7 @@
         display: flex;
     }
     span {
-        background-color: var(--invert);
+        background-color: var(--dark);
         margin-inline: auto;
         width: 90%;
         height: 3px;
@@ -22,6 +22,7 @@
     }
     &--open {
         span {
+            background-color: var(--text-color);
             &:first-child {
                 transform: translateY(12px) rotate(-135deg);
             }

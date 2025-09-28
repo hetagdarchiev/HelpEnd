@@ -23,7 +23,7 @@ export default function Flex() {
   const handleInputChange = (index, newValue, setter) => {
     setter((prevValues) => {
       const updatedValues = [...prevValues];
-      updatedValues[index] = newValue === "" ? 1 : Number(newValue);
+      updatedValues[index] = newValue === "" ? "" : Number(newValue);
       return updatedValues;
     });
   };
@@ -47,11 +47,13 @@ export default function Flex() {
             flexBasis: flexBasis[0],
             order: order[0],
             backgroundColor: "yellow",
-            color: 'black'
+            color: "black",
           }}
         >
-          grow: {flexGrow[0]}<br/>
-          shrink: {flexShrink[0] }<br/>
+          grow: {flexGrow[0]}
+          <br />
+          shrink: {flexShrink[0]}
+          <br />
           order: {order[0]} <br />
           basis: {flexBasis[0]}
         </div>
@@ -64,8 +66,10 @@ export default function Flex() {
             backgroundColor: "red",
           }}
         >
-          grow: {flexGrow[1]}<br/>
-          shrink: {flexShrink[1] }<br/>
+          grow: {flexGrow[1]}
+          <br />
+          shrink: {flexShrink[1]}
+          <br />
           order: {order[1]} <br />
           basis: {flexBasis[1]}
         </div>
@@ -78,8 +82,10 @@ export default function Flex() {
             backgroundColor: "blue",
           }}
         >
-          grow: {flexGrow[2]}<br/>
-          shrink: {flexShrink[2] }<br/>
+          grow: {flexGrow[2]}
+          <br />
+          shrink: {flexShrink[2]}
+          <br />
           order: {order[2]} <br />
           basis: {flexBasis[2]}
         </div>

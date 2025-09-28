@@ -8,12 +8,11 @@
     position: relative;
     z-index: 12;
     justify-content: space-between;
-    @include tablet 
-    {
+    @include tablet {
         display: flex;
     }
     span {
-        background-color: var(--dark);
+        background-color: var(--invert);
         margin-inline: auto;
         width: 90%;
         height: 3px;

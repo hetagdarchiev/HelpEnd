@@ -51,16 +51,6 @@ export default function FuncName() {
             </a>
           </div>
           <div>
-            <label htmlFor="sbp">Sber Bank(SBP)</label>
-            <a
-              href="https://www.sberbank.com/sms/pbpn?requisiteNumber=79064954532"
-              target="_blank"
-              className={`${classes.donate__link || ""} button`}
-            >
-              <img src={SbpDonate} loading={"lazy"} />
-            </a>
-          </div>
-          <div>
             <label htmlFor="boosty">Boosty</label>
             <a
               href="https://boosty.to/voyageralone/donate"

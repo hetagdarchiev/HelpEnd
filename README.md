@@ -108,7 +108,7 @@ This project is distributed under the MIT license. For more information, see the
 If you have any questions, suggestions, or just want to thank us, you can:
 
 Send us an email: het.dar2003@yandex.ru.com
-Write to us in telegram: [text](https://t.me/Mohatma)
+Write to us in telegram: [Mohatma](https://t.me/Mohatma)
 Create an issue in GitHub.
 
 <h2>🙏 Thanks</h2>

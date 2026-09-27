@@ -107,10 +107,9 @@ This project is distributed under the MIT license. For more information, see the
 <h2>💬 Feedback</h2>
 If you have any questions, suggestions, or just want to thank us, you can:
 
-Send us an email: your-email@example.com
-Write to us in telegram: [text](https://t.me/IIddeeaas)
+Send us an email: het.dar2003@yandex.ru.com
+Write to us in telegram: [text](https://t.me/Mohatma)
 Create an issue in GitHub.
-Find us on Twitter: @yourhandle
 
 <h2>🙏 Thanks</h2>
 The icons are provided by Font Awesome/Feather Icons.
